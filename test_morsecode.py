@@ -167,5 +167,5 @@ class TestMorseCode(unittest.TestCase):
         }
         return morse_code
 
-#if __name__ == '__main__':
-#    unittest.main()
+if __name__ == '__main__':
+    unittest.main()

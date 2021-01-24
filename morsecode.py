@@ -81,7 +81,7 @@ def is_validated_english_sentence(user_input):
         True
     """
     # ===Modify codes below=============
-    result = re.sub('[-@#$%^&*()+=\[\]\{\}\"\';:|`~0-9]','',user_input)
+    result = re.sub('[-_@#$%^&*()+=\[\]\{\}\"\';:|`~0-9]','',user_input)
     if len(result) < len(user_input):
         return False
     result = re.sub('[.,!?]','',result)
@@ -271,7 +271,7 @@ def main():
     while True:
         user_input = input("Input your message(H - Help, 0 - Exit): ")
         if user_input == '0': break
-        elif is_help_command(user_input): get_help_message()
+        elif is_help_command(user_input): print(get_help_message())
         else:
             if not is_validated_morse_code(user_input) and not is_validated_english_sentence(user_input):
                 print("Wrong Input")
